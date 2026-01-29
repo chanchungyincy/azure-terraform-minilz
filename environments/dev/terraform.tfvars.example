@@ -1,0 +1,8 @@
+location    = "eastasia"
+name_prefix = "minilz1"
+
+tags = {
+  project = "azure-terraform-minilz"
+  owner   = "CCY"
+  env     = "dev"
+}
