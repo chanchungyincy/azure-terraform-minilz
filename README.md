@@ -9,6 +9,7 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 
 ## MVP Scope
 - One dedicated Resource Group per repo (minilz1-rg for dev)
+- Virtual Network with separate mgmt and app subnets
 
 ## Isolation (Multiple repos / one subscription)
 - One repo uses one dedicated Resource Group.

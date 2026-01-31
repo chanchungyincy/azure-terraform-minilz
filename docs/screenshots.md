@@ -14,3 +14,14 @@
 
 ### Resource group in portal 
 ![RG portal](./screenshots/4.png)
+
+## Day 3 - Network
+
+### Terraform apply in francecentral (because of policy)
+![VNet apply](./screenshots/5.png)
+
+### Virtual network 
+![VNet](./screenshots/6.png)
+
+### Mgmt/app subnets 
+![Subnets](./screenshots/7.png)
