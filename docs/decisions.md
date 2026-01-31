@@ -9,6 +9,7 @@
 
 ## Networking Strategy
 - Use separate mgmt and app subnets to prepare for stricter NSG rules and potential private-only app access.
+- Apply NSGs at subnet level so that all VMs in mgmt/app subnets share consistent rules. SSH is only open from an allowed CIDR into the mgmt subnet.
 
 ## MVP safety defaults
 - Do not run terraform apply until variables are reviewed.

@@ -11,4 +11,6 @@ module "network" {
   location            = var.location
   name_prefix         = var.name_prefix
   tags                = var.tags
+
+  allowed_ssh_cidr = var.allowed_ssh_cidr
 }

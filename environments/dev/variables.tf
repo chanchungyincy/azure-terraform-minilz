@@ -13,3 +13,8 @@ variable "tags" {
   description = "Common tags for all resources."
   default     = {}
 }
+
+variable "allowed_ssh_cidr" {
+  type        = string
+  description = "CIDR allowed to SSH into mgmt subnet."
+}

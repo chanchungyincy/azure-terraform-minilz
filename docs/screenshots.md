@@ -25,3 +25,11 @@
 
 ### Mgmt/app subnets 
 ![Subnets](./screenshots/7.png)
+
+## Day 4 - NSG baseline
+
+### Mgmt NSG with SSH rule 
+![SSH rule](./screenshots/8.png)
+
+### Subnet NSG associations 
+![NSG association](./screenshots/9.png)

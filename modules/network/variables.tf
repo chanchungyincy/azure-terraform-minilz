@@ -18,3 +18,9 @@ variable "tags" {
   description = "Common tags."
   default     = {}
 }
+
+variable "allowed_ssh_cidr" {
+  type        = string
+  description = "CIDR range allowed to SSH into mgmt subnet (e.g. your home IP/32)."
+}
+
