@@ -7,6 +7,9 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - No expensive resources are left behind after destroy.
 - Clear runbook for troubleshooting common incidents.
 
+## MVP Scope
+- One dedicated Resource Group per repo (minilz1-rg for dev)
+
 ## Isolation (Multiple repos / one subscription)
 - One repo uses one dedicated Resource Group.
 - Use unique name_prefix per repo.

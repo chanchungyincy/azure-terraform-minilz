@@ -4,6 +4,7 @@
 - One repo = one dedicated Resource Group (RG). All resources must be deployed into that RG.
 - Use a unique name_prefix per repo to avoid naming collisions.
 - Enforce tags on all resources: project, owner, env.
+- Each repo owns its own resource group (e.g., minilz1-rg) so that all resources share the same lifecycle and can be destroyed together.
 
 ## MVP safety defaults
 - Do not run terraform apply until variables are reviewed.
