@@ -11,6 +11,10 @@
 - Use separate mgmt and app subnets to prepare for stricter NSG rules and potential private-only app access.
 - Apply NSGs at subnet level so that all VMs in mgmt/app subnets share consistent rules. SSH is only open from an allowed CIDR into the mgmt subnet.
 
+## Monitoring & Governance 
+- Use a single shared Log Analytics workspace and Action Group in the hub to centralize logging and alerting for all spokes.
+
+
 ## MVP safety defaults
 - Do not run terraform apply until variables are reviewed.
 - Prefer minimal, low-cost SKUs; avoid Bastion/Log Analytics in MVP unless explicitly enabled.

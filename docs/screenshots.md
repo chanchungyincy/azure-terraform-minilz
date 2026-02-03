@@ -51,3 +51,11 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### Hub and spoke VNets 
 ![Hub and Spoke VNets](./screenshots/14.png)
+
+## Day 7 - Logging and monitoring
+
+### Log Analytics workspace 
+![Log Analytics](./screenshots/15.png)
+
+### Action Group
+![Action Group](./screenshots/16.png)

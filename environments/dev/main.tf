@@ -20,7 +20,7 @@ module "spoke_network" {
   name_prefix         = "${var.name_prefix}-spoke"
   tags                = var.tags
 
-  allowed_ssh_cidr    = var.allowed_ssh_cidr
+  allowed_ssh_cidr = var.allowed_ssh_cidr
 }
 
 
@@ -33,4 +33,14 @@ module "governance" {
   budget_amount_usd = var.budget_amount_usd
   budget_start_date = var.budget_start_date
   budget_email      = var.budget_email
+}
+
+module "logging" {
+  source              = "../../modules/logging"
+  resource_group_name = module.rg.name
+  location            = var.location
+  name_prefix         = "${var.name_prefix}-hub"
+  tags                = var.tags
+
+  action_group_email = var.budget_email
 }
