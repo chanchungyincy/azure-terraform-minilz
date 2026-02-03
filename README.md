@@ -6,6 +6,7 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - A new user can deploy within 30 minutes and destroy within 10 minutes.
 - No expensive resources are left behind after destroy.
 - Clear runbook for troubleshooting common incidents.
+- RG-scoped monthly budget with email alert at 80% usage to avoid overspend.
 
 ## MVP Scope
 - One dedicated Resource Group per repo (minilz1-rg for dev)

@@ -8,3 +8,8 @@ tags = {
 }
 
 allowed_ssh_cidr = "0.0.0.0/0"
+
+enable_budget     = true
+budget_amount_usd = 8
+budget_start_date = "2026-02-01"
+budget_email      = "xxxxxxx@gmail.com"

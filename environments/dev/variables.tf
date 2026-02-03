@@ -18,3 +18,24 @@ variable "allowed_ssh_cidr" {
   type        = string
   description = "CIDR allowed to SSH into mgmt subnet."
 }
+
+variable "enable_budget" {
+  type        = bool
+  description = "Whether to create an RG-scoped budget."
+  default     = true
+}
+
+variable "budget_amount_usd" {
+  type        = number
+  description = "Monthly budget in USD."
+}
+
+variable "budget_start_date" {
+  type        = string
+  description = "Budget start date in YYYY-MM-DD."
+}
+
+variable "budget_email" {
+  type        = string
+  description = "Alert email for budget notifications."
+}

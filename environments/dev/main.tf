@@ -14,3 +14,14 @@ module "network" {
 
   allowed_ssh_cidr = var.allowed_ssh_cidr
 }
+
+module "governance" {
+  source            = "../../modules/governance"
+  resource_group_id = module.rg.id
+  name_prefix       = var.name_prefix
+
+  enable_budget     = var.enable_budget
+  budget_amount_usd = var.budget_amount_usd
+  budget_start_date = var.budget_start_date
+  budget_email      = var.budget_email
+}
