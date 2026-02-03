@@ -5,15 +5,24 @@ module "rg" {
   tags     = var.tags
 }
 
-module "network" {
-  source              = "../../modules/network"
+module "hub_network" {
+  source              = "../../modules/network_hub"
   resource_group_name = module.rg.name
   location            = var.location
-  name_prefix         = var.name_prefix
+  name_prefix         = "${var.name_prefix}-hub"
+  tags                = var.tags
+}
+
+module "spoke_network" {
+  source              = "../../modules/network_spoke"
+  resource_group_name = module.rg.name
+  location            = var.location
+  name_prefix         = "${var.name_prefix}-spoke"
   tags                = var.tags
 
-  allowed_ssh_cidr = var.allowed_ssh_cidr
+  allowed_ssh_cidr    = var.allowed_ssh_cidr
 }
+
 
 module "governance" {
   source            = "../../modules/governance"

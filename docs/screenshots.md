@@ -46,3 +46,8 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### Budget details 
 ![RG budget details](./screenshots/13.png)
+
+## Day 6 - Hub and Spoke networking
+
+### Hub and spoke VNets 
+![Hub and Spoke VNets](./screenshots/14.png)
