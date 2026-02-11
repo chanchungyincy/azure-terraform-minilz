@@ -78,3 +78,11 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### Tag policy assignment 
 ![Tag policy](./screenshots/21.png)
+
+## Day 10 - CI/CD identity and RBAC
+
+### App registration for GitHub Actions 
+![App registration](./screenshots/22.png)
+
+### RG role assignment 
+![RG RBAC](./screenshots/23.png)

@@ -21,3 +21,9 @@
 - Do not run terraform apply until variables are reviewed.
 - Prefer minimal, low-cost SKUs; avoid Bastion/Log Analytics in MVP unless explicitly enabled.
 - Preferred VM size is small burstable (B‑series). If B1s not available in policy‑allowed regions, fall back to next smallest SKU (e.g. B2ats v2) within free‑tier limits.
+
+## CI/CD identity and RBAC
+
+- GitHub Actions uses a dedicated Azure AD application (service principal or workload identity) to run Terraform.
+- The CI/CD identity is granted the Contributor role only on the project resource group (minilz1-rg), not on the entire subscription.
+- This follows least-privilege: the pipeline can deploy and destroy resources in its own RG but cannot modify unrelated resources.

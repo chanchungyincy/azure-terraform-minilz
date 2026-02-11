@@ -14,3 +14,10 @@
    - Confirm your public IP has not changed; update allowed_ssh_cidr if needed.
 4. Check SSH command:
    - Use the correct username and private key: `ssh -i <path-to-private-key> <admin_username>@<public_ip>`.
+
+ ## Troubleshooting: pipeline cannot deploy
+
+- Check the CI/CD identity:
+  - Ensure the GitHub Actions app registration exists and is enabled.
+  - Verify the app has the Contributor role on the project resource group       (minilz1-rg).
+- If Terraform plan/apply in GitHub fails with authorization errors, re-check role assignments and scope.
