@@ -13,8 +13,9 @@
 
 ## Monitoring & Governance 
 - Use a single shared Log Analytics workspace and Action Group in the hub to centralize logging and alerting for all spokes.
-
+- Tried using ed25519 SSH keys for the Linux VM but the image/API only accepted RSA keys, so I standardised on 4096-bit RSA for compatibility.
 
 ## MVP safety defaults
 - Do not run terraform apply until variables are reviewed.
 - Prefer minimal, low-cost SKUs; avoid Bastion/Log Analytics in MVP unless explicitly enabled.
+- Preferred VM size is small burstable (B‑series). If B1s not available in policy‑allowed regions, fall back to next smallest SKU (e.g. B2ats v2) within free‑tier limits.

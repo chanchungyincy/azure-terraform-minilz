@@ -13,6 +13,7 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - Virtual Network with separate mgmt and app subnets
 - NSG baseline: SSH only from allowed CIDR into mgmt subnet
 - Hub-spoke style networking: separate hub and spoke VNets ready for peering.
+- One Linux VM in the spoke mgmt subnet with SSH access locked down by NSG.
 
 ## Isolation (Multiple repos / one subscription)
 - One repo uses one dedicated Resource Group.
@@ -27,3 +28,6 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 ## Safety
 - This repo can create billable Azure resources (VM, public IP, disks).
 - Always run `terraform plan` before `terraform apply`.
+
+## Quick start
+- After apply, use the VM public IP and your SSH key to connect: `ssh azureuser@<public_ip>`.

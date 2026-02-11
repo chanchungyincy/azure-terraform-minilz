@@ -59,3 +59,14 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### Action Group
 ![Action Group](./screenshots/16.png)
+
+## Day 8 - Linux VM
+
+### Terraform apply 
+![VM apply](./screenshots/17.png)
+
+### VM networking 
+![VM networking](./screenshots/18.png)
+
+### SSH into VM 
+![SSH](./screenshots/19.png)

@@ -39,3 +39,19 @@ variable "budget_email" {
   type        = string
   description = "Alert email for budget notifications."
 }
+
+variable "admin_username" {
+  type        = string
+  description = "Admin username for SSH."
+}
+
+variable "ssh_public_key" {
+  type        = string
+  description = "SSH public key for the VM."
+}
+
+variable "vm_size" {
+  type        = string
+  description = "Size of the Linux VM."
+  default     = "Standard_B1s"
+}

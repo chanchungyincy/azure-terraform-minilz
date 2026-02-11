@@ -17,6 +17,7 @@
 - Keep Bastion disabled in MVP; only enable when needed.
 - Use a single shared Log Analytics workspace with basic retention.
 - Regularly run `terraform destroy` for environments no longer in use.
+- Preferred VM size is small burstable (B‑series). If B1s not available in policy‑allowed regions, fall back to next smallest SKU (e.g. B2ats v2) within free‑tier limits.
 
 ## Post-deploy sanity checks
 - Check the resource group in the portal for unexpected resources.

@@ -44,3 +44,20 @@ module "logging" {
 
   action_group_email = var.budget_email
 }
+
+module "vm_mgmt" {
+  source              = "../../modules/compute_linux_vm"
+  resource_group_name = module.rg.name
+  location            = var.location
+  name_prefix         = "${var.name_prefix}-vm-mgmt"
+
+  subnet_id        = module.spoke_network.subnet_mgmt_id
+  admin_username   = var.admin_username
+  ssh_public_key   = var.ssh_public_key
+  create_public_ip = true
+
+  tags = var.tags
+  
+  vm_size = var.vm_size
+}
+

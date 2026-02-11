@@ -13,3 +13,8 @@ enable_budget     = true
 budget_amount_usd = 8
 budget_start_date = "2026-02-01"
 budget_email      = "xxxxxxx@gmail.com"
+
+admin_username = "azureuser"
+ssh_public_key = "ssh-rsa AAAA....REPLACE_ME"
+
+vm_size = "Standard_B2ats_v2"
