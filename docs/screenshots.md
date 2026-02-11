@@ -70,3 +70,11 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### SSH into VM 
 ![SSH](./screenshots/19.png)
+
+## Day 9 - Tagging and policy
+
+### Tagged resources 
+![Tags](./screenshots/20.png)
+
+### Tag policy assignment 
+![Tag policy](./screenshots/21.png)

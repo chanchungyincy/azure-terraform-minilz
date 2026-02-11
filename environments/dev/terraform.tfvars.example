@@ -3,8 +3,9 @@ name_prefix = "minilz1"
 
 tags = {
   project = "azure-terraform-minilz"
-  owner   = "CCY"
+  owner   = "ME"
   env     = "dev"
+  costCenter = "learning"
 }
 
 allowed_ssh_cidr = "0.0.0.0/0"

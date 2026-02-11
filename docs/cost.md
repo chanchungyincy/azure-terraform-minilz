@@ -18,6 +18,7 @@
 - Use a single shared Log Analytics workspace with basic retention.
 - Regularly run `terraform destroy` for environments no longer in use.
 - Preferred VM size is small burstable (B‑series). If B1s not available in policy‑allowed regions, fall back to next smallest SKU (e.g. B2ats v2) within free‑tier limits.
+- Use env/owner/costCenter tags on every resource and enforce them with policy, so unexpected spend can be traced back to a specific project or environment.
 
 ## Post-deploy sanity checks
 - Check the resource group in the portal for unexpected resources.

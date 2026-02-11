@@ -14,6 +14,8 @@
 ## Monitoring & Governance 
 - Use a single shared Log Analytics workspace and Action Group in the hub to centralize logging and alerting for all spokes.
 - Tried using ed25519 SSH keys for the Linux VM but the image/API only accepted RSA keys, so I standardised on 4096-bit RSA for compatibility.
+- All resources use a common tag set: env, owner, costCenter, project. This enables cost breakdown and filtering in Cost Management.
+- A built-in Azure Policy ("Require a tag on resources") is assigned to enforce the presence of the costCenter tag on new resources.
 
 ## MVP safety defaults
 - Do not run terraform apply until variables are reviewed.
