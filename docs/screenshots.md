@@ -86,3 +86,8 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### RG role assignment 
 ![RG RBAC](./screenshots/23.png)
+
+## Day 11 - Remote state backend
+
+### Storage account container with tfstate (proves: remote backend configured)
+![Remote state](./screenshots/24.png)

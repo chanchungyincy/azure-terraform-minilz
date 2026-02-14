@@ -21,6 +21,7 @@
 - Do not run terraform apply until variables are reviewed.
 - Prefer minimal, low-cost SKUs; avoid Bastion/Log Analytics in MVP unless explicitly enabled.
 - Preferred VM size is small burstable (B‑series). If B1s not available in policy‑allowed regions, fall back to next smallest SKU (e.g. B2ats v2) within free‑tier limits.
+- Moved Terraform state for dev to an Azure Storage backend (azurerm backend) instead of local files to enable safer collaboration and avoid state loss.
 
 ## CI/CD identity and RBAC
 

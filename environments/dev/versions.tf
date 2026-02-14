@@ -6,4 +6,11 @@ terraform {
       version = "~> 3.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "minilz1-rg"
+    storage_account_name = "ccyinminilz1"
+    container_name       = "tfstate"
+    key                  = "dev.tfstate"
+  }
 }
