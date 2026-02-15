@@ -9,7 +9,7 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - RG-scoped monthly budget with email alert at 80% usage to avoid overspend.
 
 ## MVP Scope
-- One dedicated Resource Group per repo (minilz1-rg for dev)
+- One dedicated Resource Group per repo (minilz1-rg for dev).
 - Virtual Network with separate mgmt and app subnets.
 - NSG baseline: SSH only from allowed CIDR into mgmt subnet.
 - Hub-spoke style networking: separate hub and spoke VNets ready for peering.
