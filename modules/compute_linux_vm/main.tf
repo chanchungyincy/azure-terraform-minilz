@@ -29,7 +29,7 @@ resource "azurerm_linux_virtual_machine" "this" {
   location            = var.location
   size                = var.vm_size
 
-  admin_username      = var.admin_username
+  admin_username = var.admin_username
   network_interface_ids = [
     azurerm_network_interface.this.id
   ]

@@ -1,6 +1,6 @@
 resource "azurerm_consumption_budget_resource_group" "rg" {
-  count            = var.enable_budget ? 1 : 0
-  name             = "${var.name_prefix}-rg-budget"
+  count             = var.enable_budget ? 1 : 0
+  name              = "${var.name_prefix}-rg-budget"
   resource_group_id = var.resource_group_id
 
   amount     = var.budget_amount_usd

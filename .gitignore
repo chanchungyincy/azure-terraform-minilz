@@ -7,3 +7,4 @@ crash.*.log
 *.pem
 *.key
 *.tfvars.json
+state-backup.json

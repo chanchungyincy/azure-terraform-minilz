@@ -39,5 +39,13 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - This repo can create billable Azure resources (VM, public IP, disks).
 - Always run `terraform plan` before `terraform apply`.
 
+## CI/CD (GitHub Actions)
+
+- Pull requests:
+  - Run `terraform fmt -check`, `terraform validate`, and `terraform plan` against the dev environment.
+  - Plan output is visible in the workflow logs so reviewers can see exactly what will change.
+- Main branch:
+  - A separate workflow (apply) will run `terraform apply` after PRs are approved and merged (Day 13).
+
 ## Quick start
 - After apply, use the VM public IP and your SSH key to connect: `ssh azureuser@<public_ip>`.
