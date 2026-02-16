@@ -30,12 +30,6 @@ jobs:
         working-directory: environments/dev
         run: cp terraform.tfvars.example terraform.tfvars
 
-      - name: Terraform plan
-        working-directory: environments/dev
-        env:
-          ADMIN_SSH_PUBLIC_KEY: ${{ secrets.ADMIN_SSH_PUBLIC_KEY }}
-        run: terraform plan -input=false -no-color -var="ssh_public_key=${ADMIN_SSH_PUBLIC_KEY}"
-
       - name: Terraform fmt
         working-directory: environments/dev
         run: terraform fmt -check -recursive
@@ -50,4 +44,6 @@ jobs:
 
       - name: Terraform plan
         working-directory: environments/dev
-        run: terraform plan -input=false -no-color
+        env:
+          ADMIN_SSH_PUBLIC_KEY: ${{ secrets.ADMIN_SSH_PUBLIC_KEY }}
+        run: terraform plan -input=false -no-color -var="ssh_public_key=${ADMIN_SSH_PUBLIC_KEY}"
