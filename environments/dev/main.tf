@@ -1,3 +1,8 @@
+variable "resource_group_name" {
+  type    = string
+  default = "minilz1-rg"
+}
+
 module "rg" {
   source   = "../../modules/resource_group"
   name     = "${var.name_prefix}-rg"
@@ -57,7 +62,7 @@ module "vm_mgmt" {
   create_public_ip = true
 
   tags = var.tags
-  
+
   vm_size = var.vm_size
 }
 

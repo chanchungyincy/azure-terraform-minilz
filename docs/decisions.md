@@ -28,3 +28,4 @@
 - GitHub Actions uses a dedicated Azure AD application (service principal or workload identity) to run Terraform.
 - The CI/CD identity is granted the Contributor role only on the project resource group (minilz1-rg), not on the entire subscription.
 - This follows least-privilege: the pipeline can deploy and destroy resources in its own RG but cannot modify unrelated resources.
+- Every change goes through a PR pipeline that runs fmt/validate/plan so reviewers can see changes before any apply.

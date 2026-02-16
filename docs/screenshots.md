@@ -91,3 +91,9 @@ After reading the error message, I find that eastasia is not the available regio
 
 ### Storage account container with tfstate (proves: remote backend configured)
 ![Remote state](./screenshots/24.png)
+
+## Day 12 - PR plan workflow
+
+### GitHub Actions PR plan run (proves: fmt/validate/plan on every pull request)
+![PR plan](./screenshots/25.png)
+![PR plan](./screenshots/26.png)

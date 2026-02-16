@@ -9,9 +9,9 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 - RG-scoped monthly budget with email alert at 80% usage to avoid overspend.
 
 ## MVP Scope
-- One dedicated Resource Group per repo (minilz1-rg for dev)
-- Virtual Network with separate mgmt and app subnets
-- NSG baseline: SSH only from allowed CIDR into mgmt subnet
+- One dedicated Resource Group per repo (minilz1-rg for dev).
+- Virtual Network with separate mgmt and app subnets.
+- NSG baseline: SSH only from allowed CIDR into mgmt subnet.
 - Hub-spoke style networking: separate hub and spoke VNets ready for peering.
 - One Linux VM in the spoke mgmt subnet with SSH access locked down by NSG.
 
@@ -38,6 +38,14 @@ Terraform deploys a minimal production-like Azure landing zone (simplified versi
 ## Safety
 - This repo can create billable Azure resources (VM, public IP, disks).
 - Always run `terraform plan` before `terraform apply`.
+
+## CI/CD (GitHub Actions)
+
+- Pull requests:
+  - Run `terraform fmt -check`, `terraform validate`, and `terraform plan` against the dev environment.
+  - Plan output is visible in the workflow logs so reviewers can see exactly what will change.
+- Main branch:
+  - A separate workflow (apply) will run `terraform apply` after PRs are approved and merged (Day 13).
 
 ## Quick start
 - After apply, use the VM public IP and your SSH key to connect: `ssh azureuser@<public_ip>`.

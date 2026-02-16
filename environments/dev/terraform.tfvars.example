@@ -2,9 +2,9 @@ location    = "eastasia"
 name_prefix = "minilz1"
 
 tags = {
-  project = "azure-terraform-minilz"
-  owner   = "ME"
-  env     = "dev"
+  project    = "azure-terraform-minilz"
+  owner      = "ME"
+  env        = "dev"
   costCenter = "learning"
 }
 
